@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HistoryPagComponent } from './pages/history-pag/history-pag.component';
+import { FavoritesPagComponent } from './pages/favorites-pag/favorites-pag.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: HistoryPagComponent,
+    component: FavoritesPagComponent,
     outlet: 'child'
   }
 ];
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HistoryRoutingModule { }
+export class FavoritesRoutingModule { }
