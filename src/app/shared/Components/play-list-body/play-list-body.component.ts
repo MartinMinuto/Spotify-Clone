@@ -17,6 +17,10 @@ export class PlayListBodyComponent implements OnInit {
  }
 
  changeSort(property:string): void {
-
+  const {order} = this.optionSort
+  this.optionSort ={
+    property: property,
+    order: order === 'asc' ? 'desc' : 'asc'
+  }
  }
 }

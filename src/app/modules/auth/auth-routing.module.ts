@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthPagComponent } from './pages/auth-pag/auth-pag.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',
+    component: AuthPagComponent
+  },
+  {
+    path:'**',
+    redirectTo: './auth/login'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
