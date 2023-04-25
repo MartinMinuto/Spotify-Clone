@@ -1,5 +1,6 @@
 .play-list-body {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
+    height: 100vh;
 }
 
 .play-list-table-header {
@@ -33,6 +34,7 @@
 .play-list-rows .track-name-opacity {
     opacity: .7;
     font-weight: 300;
+    font-size: 0.8em;
 }
 
 .cover-section {
