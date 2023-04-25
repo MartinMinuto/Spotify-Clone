@@ -5,6 +5,8 @@ import { MediaPlayerComponent } from './Components/media-player/media-player.com
 import { HeaderUserComponent } from './Components/header-user/header-user.component';
 import { CardPlayerComponent } from './Components/card-player/card-player.component';
 import { SectionGenericComponent } from './Components/section-generic/section-generic.component';
+import { PlayListHeaderComponent } from './Components/play-list-header/play-list-header.component';
+import { PlayListBodyComponent } from './Components/play-list-body/play-list-body.component';
 
 
 
@@ -14,7 +16,9 @@ import { SectionGenericComponent } from './Components/section-generic/section-ge
     MediaPlayerComponent,
     HeaderUserComponent,
     CardPlayerComponent,
-    SectionGenericComponent
+    SectionGenericComponent,
+    PlayListHeaderComponent,
+    PlayListBodyComponent
   ],
   imports: [
     CommonModule
@@ -24,7 +28,9 @@ import { SectionGenericComponent } from './Components/section-generic/section-ge
     MediaPlayerComponent,
     HeaderUserComponent,
     CardPlayerComponent,
-    SectionGenericComponent
+    SectionGenericComponent,
+    PlayListHeaderComponent,
+    PlayListBodyComponent
   ]
 })
 export class SharedModule { }
