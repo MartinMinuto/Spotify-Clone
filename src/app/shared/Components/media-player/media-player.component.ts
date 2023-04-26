@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
+import { MultimediaService } from '@shared/services/multimedia.service';
 
 @Component({
   selector: 'app-media-player',
@@ -15,6 +16,8 @@ export class MediaPlayerComponent implements OnInit {
     _id: 1
 
   }
+
+  constructor(private multimediaService: MultimediaService) {}
 
   ngOnInit(): void {
     

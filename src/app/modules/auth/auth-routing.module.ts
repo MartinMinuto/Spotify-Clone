@@ -4,7 +4,7 @@ import { AuthPagComponent } from './pages/auth-pag/auth-pag.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'login',
     component: AuthPagComponent
   },
   {
