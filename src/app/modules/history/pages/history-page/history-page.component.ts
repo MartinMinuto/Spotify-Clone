@@ -16,8 +16,8 @@ export class HistoryPageComponent implements OnInit {
   }
 
   receiveData(event: string): void {
-    //TODO: agarras el termino y sabes que solo se ejecuta cunado tiene 3 caracters
-    console.log('🎁 Estoy en el padre jua jua...', event);
+  
+    console.log('...', event);
     this.listResults$ = this.searchService.searchTracks$(event)
 
   }
