@@ -1,22 +1,46 @@
-import { Injectable } from '@angular/core';
 import { TrackModel } from '@core/models/tracks.model';
-import { Observable, of } from 'rxjs'
-import * as dataRaw from '../../../data/tracks.json'
-
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { map, mergeMap, tap, catchError } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class TrackService {
+  private readonly URL = environment.api
+  dataTracksRandom$: any;
+  dataTracksTrending$: any;
 
-  dataTracksTrending$: Observable<TrackModel[]> = of([])
-  dataTracksRandom$: Observable<TrackModel[]> = of([])
+  constructor(private http: HttpClient) {
 
-  constructor() {
-    const { data }:any = (dataRaw as any).default
-    this.dataTracksTrending$ = of(data)
+  }
 
-    this.dataTracksRandom$ = new Observable((observer) => {
-
+  private skipById(listTracks: TrackModel[], id: number): Promise<TrackModel[]> {
+    return new Promise((resolve, reject) => {
+      const listTmp = listTracks.filter(a => a._id !== id)
+      resolve(listTmp)
     })
-   }
+  }
+
+  getAllTracks$(): Observable<any> {
+    return this.http.get(`${this.URL}/tracks`)
+      .pipe(
+        map(({ data }: any) => {
+          return data
+        })
+      )
+  }
+
+
+  getAllRandom$(): Observable<any> {
+    return this.http.get(`${this.URL}/tracks`)
+      .pipe(
+        mergeMap(({ data }: any) => this.skipById(data, 2)),
+        catchError((err) => {
+          const { status, statusText } = err;
+          return of([])
+        })
+      )
+  }
 }

@@ -11,7 +11,9 @@ describe('HeaderUserComponent', () => {
       declarations: [ HeaderUserComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(HeaderUserComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

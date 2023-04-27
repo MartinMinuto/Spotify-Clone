@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FavoritesPagComponent } from './pages/favorites-pag/favorites-pag.component';
+import { FavoritePageComponent } from './pages/favorite-page/favorite-page.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: FavoritesPagComponent,
-    outlet: 'child'
+    path: '',
+    component: FavoritePageComponent
   }
 ];
 

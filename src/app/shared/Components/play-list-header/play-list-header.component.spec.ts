@@ -11,7 +11,9 @@ describe('PlayListHeaderComponent', () => {
       declarations: [ PlayListHeaderComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(PlayListHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

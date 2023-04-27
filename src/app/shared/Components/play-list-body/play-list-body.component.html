@@ -1,8 +1,8 @@
 <div class="play-list-body">
     <ul class="play-list-table-header">
-        <li (click)="changeSort('name')">Title</li>
-        <li (click)="changeSort('album')">Album</li>
-        <li>Fecha incorporación</li>
+        <li (click)="changeSort('name')">Nombre ❤</li>
+        <li (click)="changeSort('album')">álbum 🆗</li>
+        <li>fecha incorporación 🍌😁</li>
         <li><i class="uil uil-clock-eight"></i></li>
     </ul>
     <ul class="play-list-rows" *ngFor="let track of tracks |orderList:optionSort.property:optionSort.order">
@@ -22,6 +22,7 @@
     </ul>
 </div>
 
+<!--template del cover-->
 <ng-template #coverSection let-track="track">
 
     <div class="cover-section">

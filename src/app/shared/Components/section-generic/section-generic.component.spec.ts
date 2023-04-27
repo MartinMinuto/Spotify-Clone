@@ -11,7 +11,9 @@ describe('SectionGenericComponent', () => {
       declarations: [ SectionGenericComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(SectionGenericComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

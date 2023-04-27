@@ -26,12 +26,11 @@
     align-items: center;
     align-content: center;
     padding: 0 0 0 .75rem;
-    font-size: 0.72em;
 }
 
 .card-player .buttons-player {
     opacity: 0;
-    width: 4rem;
+    width: 5rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -81,5 +80,5 @@
 .card-player.player-big .buttons-player {
     position: absolute;
     right: 0;
-    top: 17rem
+    top: 13rem
 }

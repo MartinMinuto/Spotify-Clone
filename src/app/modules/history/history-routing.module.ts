@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HistoryPagComponent } from './pages/history-pag/history-pag.component';
+import { HistoryPageComponent } from './pages/history-page/history-page.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: HistoryPagComponent,
-    outlet: 'child'
+    path: '',
+    component: HistoryPageComponent
   }
 ];
 

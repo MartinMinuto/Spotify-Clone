@@ -18,12 +18,12 @@ export class TracksPagComponent implements OnInit, OnDestroy {
 
    ngOnInit(): void {
      const observer1$ = this.trackService.dataTracksTrending$
-     .subscribe(response => {
+     .subscribe((response: TrackModel[]) => {
       this.tracksTrending = response
      })
 
      const observer2$ = this.trackService.dataTracksRandom$
-     .subscribe(response => {
+     .subscribe((response: any) => {
       this.tracksRandom = [...this.tracksRandom, ...response]
      })
 

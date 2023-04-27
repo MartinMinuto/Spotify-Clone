@@ -1,16 +1,20 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: 'img[appImgBroken]'
 })
 export class ImgBrokenDirective {
-  @HostListener('error') handleError(): void{
+  @Input() customImg: string = ''
+  @HostListener('error') handleError(): void {
     const elNative = this.elHost.nativeElement
-    elNative.src = 'https://ionicframework.com/docs/img/demos/avatar.svg'
+    console.log('🔴 Esta imagen revento -->', this.elHost);
+    elNative.src = this.customImg
+
   }
 
   constructor(private elHost: ElementRef) {
-    
-   }
+
+
+  }
 
 }
